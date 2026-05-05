@@ -6,7 +6,12 @@ const jwt = require('jsonwebtoken');
 const db = require('./db');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://unique-lily-fcd63d.netlify.app',
+    'http://localhost:3000', // Allow local development as well
+  ]
+}));
 app.use(express.json());
 
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback_secret';
