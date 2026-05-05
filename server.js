@@ -16,7 +16,7 @@ connectDB();
 
 app.use(cors({
   origin: [
-    'https://unique-lily-fcd63d.netlify.app',
+    'https://gnxtechcompany.netlify.app',
     'http://localhost:3000', // Allow local development as well
   ]
 }));
